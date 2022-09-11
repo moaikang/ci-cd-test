@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Run Tests
     steps:
-      - uses: actions/checkout@v3
-      - run: yarn install
-      - run: yarn test
+      - name: 액션/체크아웃@v3
+        uses: actions/checkout@v3
+
+      - name: 의존성 설치
+        run: yarn install
+
+      - name: 테스트
+        run: yarn test
